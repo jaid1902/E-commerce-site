@@ -1,6 +1,14 @@
 import { create } from "zustand";
 import { currentCart } from "@wix/ecom";
 import { WixClient } from "@/context/wixContent";
+
+type Cart = currentCart.Cart & {
+  subtotal: {
+    amount: number;
+    currency: string;
+    // other subtotal properties
+  };
+};
 type CartState = {
   cart: currentCart.Cart;
   isLoading: boolean;

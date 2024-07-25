@@ -3,6 +3,7 @@ import Image from "next/image";
 import { media as wixMedia } from "@wix/sdk";
 import { useWixClient } from "@/Hooks/useWixClient";
 import { currentCart } from "@wix/ecom";
+
 const CartModel = () => {
   const wixClient = useWixClient();
   const { cart, isLoading, removeItem } = useCartStore();
@@ -29,6 +30,9 @@ const CartModel = () => {
     }
   };
 
+  // Use type assertion to access subtotal
+  const subtotal = (cart as any)?.subtotal?.amount || "0.00";
+
   return (
     <div className="w-max absolute p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-12 right-0 flex flex-col gap-6 z-20">
       {!cart.lineItems ? (
@@ -36,9 +40,7 @@ const CartModel = () => {
       ) : (
         <>
           <h2 className="text-xl">Shopping Cart</h2>
-          {/* list */}
           <div className="flex flex-col gap-8">
-            {/* item */}
             {cart.lineItems.map((item) => (
               <div key={item._id} className="flex gap-4">
                 {item.image && (
@@ -56,12 +58,9 @@ const CartModel = () => {
                   />
                 )}
                 <div className="flex flex-col justify-between w-full">
-                  {/* top */}
                   <div className="">
-                    {/* title    */}
                     <div className=" flex items-center justify-between gap-8">
                       <h3 className="font-semibold">
-                        {" "}
                         {item.productName?.original}
                       </h3>
                       <div className="p-1 bg-gray-50 rounded-sm flex items-center gap-2">
@@ -73,12 +72,10 @@ const CartModel = () => {
                         ${item.price?.amount}
                       </div>
                     </div>
-                    {/* desc   */}
                     <div className="text-sm text-gray-500">
                       {item.availability?.status}
                     </div>
                   </div>
-                  {/* bottom   */}
                   <div className="flex justify-between text-sm ">
                     <span className="text-gray-500">Qty. {item.quantity}</span>
                     <span
@@ -94,11 +91,10 @@ const CartModel = () => {
             ))}
           </div>
 
-          {/* bottom */}
           <div className="">
             <div className=" flex items-center justify-between font-semibold">
               <span className="">Subtotal</span>
-              <span className="">${cart.subtotal.amount}</span>
+              <span className="">${subtotal}</span>
             </div>
             <p className="tex-gray-500 text-sm mt-2 mb-4">
               Shipping and taxes calculated at checkout.

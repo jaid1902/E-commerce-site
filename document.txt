@@ -1,0 +1,36 @@
+Grocery Delivery Application
+
+Overview
+
+The Grocery Delivery Application is an e-commerce platform designed to facilitate the online purchase and delivery of groceries. It features an intuitive interface for customers and delivery personnel, enabling them to browse products, manage their cart, and complete purchases efficiently. The application is built using Wix's headless e-commerce solution, ensuring a seamless shopping experience with a focus on usability and security. This makes it adaptable for various types of product listings beyond groceries.
+
+Key Features
+
+- Product Browsing: Users can browse a wide range of grocery items with filtering and sorting options.
+- Shopping Cart: Allows users to add products to their cart, view items, and manage quantities.
+- Order Management: Customers can place orders, and delivery personnel can track and manage deliveries.
+- Secure Checkout: The platform supports secure payment processing to ensure safe transactions.
+
+Technology Used
+
+- Next.js: A React framework for building fast, user-friendly web applications.
+- Wix Headless Solution for E-commerce: Manages product data, user interactions, and transaction processing.
+- Tailwind CSS: A utility-first CSS framework for styling the application.
+- TypeScript: Provides better tooling and error checking by building on JavaScript.
+
+Notes on Payment Integration
+
+Some parts of the code related to payment processing have been commented out. This is due to the current limitations with the Wix headless solution. To enable full payment functionality, the following steps are required:
+
+1. Upgrade Your Wix Plan: Ensure that your Wix account has a plan that supports payment processing features.
+
+2. Integrate Payment Gateway: Follow Wix's documentation to integrate their payment gateway into your application.
+
+3. Test Payment Flow: After upgrading, uncomment the relevant sections of the code and test the payment flow to ensure everything operates correctly.
+
+The commented-out sections include:
+
+- Checkout Logic: Code that creates checkout sessions and redirects users to the payment page.
+- Payment Redirection: Code that redirects users to the payment page after creating a checkout session.
+
+These features will work correctly once the necessary Wix services are activated.

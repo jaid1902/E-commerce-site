@@ -1,26 +1,26 @@
-"use client";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-import Confetti from "react-confetti";
+// "use client";
+// import { useRouter, useSearchParams } from "next/navigation";
+// import { useEffect } from "react";
+// import Confetti from "react-confetti";
 const SuccessPage = () => {
-  const searcParams = useSearchParams();
-  const router = useRouter();
+  // const searcParams = useSearchParams();
+  // const router = useRouter();
 
-  const orderId = searcParams.get("orderId");
-  useEffect(() => {
-    if (!orderId) return;
-    const timer = setTimeout(() => {
-      router.push(`/orders/${orderId}`);
-    }, 5000);
+  // const orderId = searcParams.get("orderId");
+  // useEffect(() => {
+  //   if (!orderId) return;
+  //   const timer = setTimeout(() => {
+  //     router.push(`/orders/${orderId}`);
+  //   }, 5000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [orderId, router]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [orderId, router]);
 
   return (
     <div className="flex flex-col gap-6 items-center justify-center h-[calc(100vh-180px)]">
-      <Confetti width={2000} height={1000} gravity={0.3} />
+      {/* <Confetti width={2000} height={1000} gravity={0.3} /> */}
       <h1 className="text-6xl md:text-4xl text-green-700">Sucessful</h1>
       <h2 className="text-xl  font-medium">
         We sent the invoice to your e-mail

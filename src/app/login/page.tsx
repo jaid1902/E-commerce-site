@@ -69,7 +69,7 @@ const LoginPage = () => {
             profile: { nickname: username },
           });
           break;
-        case MODE.RESET_PASSWORD:z
+        case MODE.RESET_PASSWORD:
           response = await wixClient.auth.sendPasswordResetEmail(
             email,
             pathName
