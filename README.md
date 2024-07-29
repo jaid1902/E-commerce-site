@@ -1,8 +1,8 @@
-# Grocery Delivery Application
+# E-Commerce Web-Application
 
 ## Overview
 
-The Grocery Delivery Application is an e-commerce platform designed to facilitate the online purchase and delivery of groceries. Built using Wix's headless e-commerce solution, the application features an intuitive interface for both customers and delivery personnel. Users can easily browse and select products, add them to their cart, and proceed with secure payment processing. The platform ensures a seamless shopping experience with a focus on usability and security, making it adaptable for various types of product listings beyond groceries.
+An e-commerce platform designed to facilitate the online purchase and delivery of groceries. Built using Wix's headless e-commerce solution, the application features an intuitive interface for both customers and delivery personnel. Users can easily browse and select products, add them to their cart, and proceed with secure payment processing. The platform ensures a seamless shopping experience with a focus on usability and security, making it adaptable for various types of product listings beyond groceries.
 
 ## Technology Used
 
